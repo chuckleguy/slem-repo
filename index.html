@@ -1,34 +1,172 @@
 <!DOCTYPE html>
-<html>
-    <title>Slem Residence Official</title>
-    <link rel="icon" type="image/ico" href="https://i.imgur.com/oGPEtCC.png">
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slem Residence</title>
     <style>
-        img {
-          margin: auto;
-          position: absolute;
-          top: 0; left: 0; bottom: 0; right: 0;
-          width: 10%;
+        @keyframes rotateBackground {
+            0% {
+                background-image: url('chukler.png');
+                background-position: 0 0;
+            }
+            100% {
+                background-image: url('chukler.png');
+                background-position: 100% 100%;
+            }
         }
-    
-        img:active {
-          transform: scale(1.2);
+        body {
+            zoom: 80%;
+            background-color: #9999b1;
+            font-family: 'Arial', sans-serif;
+            padding: 0;
+            margin-top: 100px;
+            color: #333;
+            background-repeat: repeat;
+            background-size: 5%;
+            animation: rotateBackground 50s linear infinite;
+        }
+
+        .container {
+            max-width: 840px;
+            margin: 0 auto;
+            padding: 40px 30px 30px;
+            background-color: white;
+            display: block;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 10px 10px black;
+        }
+        .header-image img {
+            max-width: 650px;
+            display: block;
+            padding-right: 250px;
+        }
+
+        /* Sidebar Styles */
+        .sidebar {
+            width: 200px;
+            margin-top: 6px;
+            
+        }
+        .sidebar button {
+            width: 100%;
+            background: linear-gradient(145deg, #a7a2b5, #1b5585);
+            color: white;
+            padding: 10px;
+            margin: 15px auto;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 10px 10px black;
+        }
+        .sidebar button:hover {
+            background-color: #7a6c84;
+        }
+        .dropdown {
+            /* display: none; */
+            background-color: white;
+            padding-left: 15px;
+            margin-top: 10px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+
+        /* Content Styles */
+        .content {
+            max-width: 760px;
+            padding-left: 20px;
+            
+        }
+        .box {
+            font-size: 25px;
+            color:white;
+            padding: 10px;
+            margin-top: 20px;
+            text-align: left;
+            display: block;
+            background: linear-gradient(145deg, #a7a2b5, #1b5585);
+            font-weight: bold;
+            box-shadow: 10px 10px black;
+        }
+        img {
+            width: auto;
+            margin: 0 auto;
+            max-width: 600px;
+            height: auto;
+            
+        }
+        p {
+            margin-top: 0px;
+            margin-left: 50px;
+        }
+
+        /* Footer Styles */
+        .footer {
+            text-align: center;
+            font-size: 15px;
+            color: #777;
+            margin-top: 40px;
         }
     </style>
+</head>
+<body>
 
-    <body>
-        <a href="javascript:void(0)" onclick="playSound()">
-        <img src="https://i.imgur.com/Qyd3LEG.png" alt="buster">
-        </a>
-    
-        <audio id="audio" src="yipee.mp3"></audio>
-        
-        <script>
-            function playSound() {
-                var audio = document.getElementById('audio');
-                audio.currentTime = 0;
-                audio.play();
-            }
-        </script>
-    </body>
+    <audio autoplay loop>
+        <source src="https://www.tam-music.com/mp3/tamsu06.mp3" type="audio/mpeg">
+    </audio>
 
+
+    <div class="header-image">
+        <img src="slem5.PNG" alt="Slem Residence">
+    </div>
+
+    <div class="container">
+
+        <!-- Sidebar & Content -->
+        <div style="display: flex; width: 100%; justify-content: space-between;">
+            <div class="sidebar">
+                <button onclick="toggleDropdown('aboutMenu')">About</button>
+                <div id="aboutMenu" class="dropdown">hallo Hallo!</div>
+
+                <button onclick="toggleDropdown('worksMenu')">Works</button>
+                <div id="worksMenu" class="dropdown">
+                    <a style="color: inherit;" href="https://www.youtube.com/">• Slem Residence</a>
+                </br></br>
+                    <a style="color: inherit;" href="https://www.youtube.com/">• Death Devil</a>
+                </br></br>
+                    <a style="color: inherit;" href="https://www.youtube.com/">• The Crazies    </a>
+                </div>
+
+
+                <button onclick="toggleDropdown('archiveMenu')">Archive</button>
+                <div id="archiveMenu" class="dropdown">
+                    <a style="color: inherit;" href="https://www.slemresidence.net/">• 2025</a>
+                </div>
+
+            </div>
+
+    <div class="content">
+        <!-- Image of Day Section -->
+        <div class="box">Image of the Day</div>
+        <p style="margin-top:40px; text-align: center; font-weight: bold;">“haha”</p>
+        <img style="box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);" src="tito.JPG"  alt="Funny Image">
+
+        <p style="text-align: center; font-weight: bold; margin-top:50px">Teto Kasane</p>
+
+        <!-- News Section -->
+        <div class="box">News</div>
+        <h1 style="font-weight: bold;">• February 22, 2024</h1>
+        <p style="font-weight: bold;">Hey it's me! Welocme to</p>
+        </div>
+    </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <a style="text-decoration:none; color: inherit;" href="https://slemresidence.net">slemresidence.net alpha build 2</a>
+        </div>
+    </div>
+
+</body>
 </html>
