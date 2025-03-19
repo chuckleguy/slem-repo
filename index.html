@@ -2,54 +2,54 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/ico" href="https://i.imgur.com/oGPEtCC.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slem Residence Official</title>
+    <title>Slem Residence WIP</title>
+    <link rel="icon" type="image/ico" href="https://i.imgur.com/oGPEtCC.png">
+    
+    <script>
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+        if (isMobile) {
+            window.location.replace("https://www.youtube.com");
+        }
+    </script>
+
     <style>
         @keyframes rotateBackground {
-            0% {
-                background-image: url('chuckler.PNG');
-                background-position: 0 0;
-            }
-            100% {
-                background-image: url('chuckler.PNG');
-                background-position: 100% 100%;
-            }
+            0% { background-image: url('chucklefaceM.png'); background-position: 0% -0%; }
+            100% { background-image: url('chucklefaceM.png'); background-position: 100% 100%; }
         }
+
         body {
             zoom: 80%;
             background-color: #9999b1;
-            font-family: 'Arial', sans-serif;
+            font-family: Arial, sans-serif;
             padding: 0;
-            margin-top: 100px;
+            margin-top: 150px;
             color: #333;
             background-repeat: repeat;
             background-size: 5%;
-            animation: rotateBackground 50s linear infinite;
+            animation: rotateBackground 55s linear infinite;
         }
 
         .container {
-            max-width: 840px;
+            max-width: 750px;
             margin: 0 auto;
             padding: 40px 30px 30px;
             background-color: white;
-            display: block;
-            flex-direction: column;
-            align-items: center;
             box-shadow: 10px 10px black;
         }
+
         .header-image img {
-            max-width: 650px;
+            max-width: 550px;
             display: block;
             padding-right: 250px;
         }
 
-        /* Sidebar Styles */
         .sidebar {
             width: 200px;
             margin-top: 6px;
-            
         }
+
         .sidebar button {
             width: 100%;
             background: linear-gradient(145deg, #a7a2b5, #1b5585);
@@ -57,16 +57,13 @@
             padding: 10px;
             margin: 15px auto;
             border: none;
-            cursor: pointer;
             font-size: 20px;
             font-weight: bold;
             box-shadow: 10px 10px black;
+            cursor: default;
         }
-        .sidebar button:hover {
-            background-color: #7a6c84;
-        }
+
         .dropdown {
-            /* display: none; */
             background-color: white;
             padding-left: 15px;
             margin-top: 10px;
@@ -74,35 +71,28 @@
             font-weight: bold;
         }
 
-        /* Content Styles */
-        .content {
-            max-width: 760px;
-            padding-left: 20px;
-            
-        }
+        .content { max-width: auto; }
+
         .box {
             font-size: 25px;
-            color:white;
+            color: white;
             padding: 10px;
             margin-top: 20px;
             text-align: left;
-            display: block;
             background: linear-gradient(145deg, #a7a2b5, #1b5585);
             font-weight: bold;
             box-shadow: 10px 10px black;
         }
+
         img {
             width: auto;
             margin: 0 auto;
-            max-width: 600px;
+            max-width: 500px;
             height: auto;
-            
-        }
-        p {
-            margin-top: 0px;
         }
 
-        /* Footer Styles */
+        p { margin-top: 0px; }
+
         .footer {
             text-align: center;
             font-size: 15px;
@@ -112,63 +102,57 @@
     </style>
 </head>
 <body>
-
     <audio autoplay loop>
         <source src="https://www.tam-music.com/mp3/tamsu06.mp3" type="audio/mpeg">
     </audio>
 
-
     <div class="header-image">
-        <img src="slem5.PNG" alt="Slem Residence">
+        <img src="slem4.PNG" alt="Slem Residence">
     </div>
 
     <div class="container">
-
-        <!-- Sidebar & Content -->
         <div style="display: flex; width: 100%; justify-content: space-between;">
             <div class="sidebar">
-                <button onclick="toggleDropdown('aboutMenu')">About</button>
-                <div id="aboutMenu" class="dropdown">hallo Hallo!</div>
-
-                <button onclick="toggleDropdown('worksMenu')">Works</button>
-                <div id="worksMenu" class="dropdown">
-                    <a style="color: inherit;" href="https://www.youtube.com/">• Slem Residence</a>
-                </br></br>
-                    <a style="color: inherit;" href="https://www.youtube.com/">• Death Devil</a>
-                </br></br>
-                    <a style="color: inherit;" href="https://www.youtube.com/">• The Crazies    </a>
+                <button>About</button>
+                <div class="dropdown" style="text-align: center;">
+                    This is Slem Inc. <br><br> This is ChuckleGuy <br>
+                    <img style="image-rendering: pixelated; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5); margin: 20px; max-width: 150px;" src="chuckster.PNG" alt="Funny Image">
+                    <br>"I hope you enjoy your stay!"<br>- TheChuckleGuy
+                    <br><br>
+                    <a style="color: inherit;" href="WIP.html">> Learn more</a>
                 </div>
 
-
-                <button onclick="toggleDropdown('archiveMenu')">Archive</button>
-                <div id="archiveMenu" class="dropdown">
-                    <a style="color: inherit;" href="https://www.slemresidence.net/">• 2025</a>
+                <button>Works</button>
+                <div class="dropdown">
+                    <a style="color: inherit;" href="WIP.html">• Slem Residence</a><br><br>
+                    <a style="color: inherit;" href="WIP.html">• Death Triple 7</a>
                 </div>
 
+                <button>Archive</button>
+                <div class="dropdown">
+                    <a style="color: inherit;" href="WIP.html">• Images</a>
+                </div>
             </div>
 
-    <div class="content">
-        <!-- Image of Day Section -->
-        <div class="box">Image of the Day</div>
-        <p style="margin-top:40px; text-align: center; font-weight: bold;">“haha”</p>
-        <img style="box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);" src="tito.JPG"  alt="Funny Image">
+            <div class="content">
+                <div class="box">Image of the Day</div>
+                <p style="margin-top:40px; text-align: center; font-weight: bold;">"Slem Celebrates Mar10 Day"</p>
+                <img style="image-rendering: pixelated; box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);" src="mar10.png" alt="Funny Image">
+                <p style="text-align: center; font-weight: bold; margin:30px">I sure love mario day!</p>
 
-        <p style="text-align: center; font-weight: bold; margin-top:50px">Teto Kasane</p>
-
-        <!-- News Section -->
-        <div class="box">News</div>
-        <h1 style="font-weight: bold;">• February 22, 2024</h1>
-        <p style="margin-left: 50px; font-weight: bold;">Hey it's me! Welocme to</p>
+                <div class="box">News</div>
+                <h1 style="font-weight: bold;">• March 19, 2025</h1>
+                <p style="margin-left: 50px; font-weight: bold;">no news</p>
+                <hr>
+                <h1 style="font-weight: bold;">• February 22, 2025</h1>
+                <p style="margin-left: 50px; font-weight: bold;">on march 17th there will be no news</p>
+            </div>
         </div>
-    </div>
 
-        <!-- Footer -->
         <div class="footer">
-            <a style="text-decoration:none; color: inherit;" href="https://slemresidence.net">slemresidence.net alpha build 2</a>
+            <a style="text-decoration:none; color: inherit;" href="https://slemresidence.net">slemresidence.net alpha build 3</a><br>
+            <a style="text-decoration:none; color: inherit;" href="https://www.tam-music.com/">music sourced from tam-music.com</a>
         </div>
     </div>
-
-</br></br</br></br></br></br>
-
 </body>
 </html>
